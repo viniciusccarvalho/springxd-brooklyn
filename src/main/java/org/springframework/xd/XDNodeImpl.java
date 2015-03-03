@@ -1,6 +1,5 @@
 package org.springframework.xd;
 
-import brooklyn.entity.basic.AbstractApplication;
 import brooklyn.entity.basic.SoftwareProcessImpl;
 
 /**
@@ -13,4 +12,6 @@ public class XDNodeImpl extends SoftwareProcessImpl implements XDNode{
     public Class getDriverInterface() {
         return XDDriver.class;
     }
+
+
 }

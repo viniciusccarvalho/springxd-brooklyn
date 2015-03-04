@@ -8,6 +8,14 @@ import brooklyn.entity.basic.SoftwareProcessImpl;
 public class XDNodeImpl extends SoftwareProcessImpl implements XDNode{
 
 
+    public XDNodeImpl(){}
+
+    @Override
+    protected void connectSensors() {
+        super.connectSensors();
+        connectServiceUpIsRunning();
+    }
+
     @Override
     public Class getDriverInterface() {
         return XDDriver.class;
